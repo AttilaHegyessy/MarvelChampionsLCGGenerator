@@ -3,6 +3,7 @@ import Hero from './Hero';
 import Aspect from './Aspect';
 import Villain from './Villain'
 import ModularSet from './ModularSet';
+import NumberOfPlayerSelector from './NumberOfPlayersSelector';
 import { Heroes } from './Data/HeroList';
 import { Aspects } from './Data/AspectList';
 import { Villains } from './Data/VillainList';
@@ -15,10 +16,10 @@ function App() {
   const [aspect, setAspect] = useState([]);
   const [villain, setVillain] = useState();
   const [modularSet, setModularSet] = useState([]);
-  const [heroTest, setHeroTest] = useState(new Map());
+  const [numberOfPlayers, setNumberOfPlayers] = useState(1);
 
   function generate() {
-    let generatedHero = getRandom(Heroes, 1);
+    let generatedHero = getRandom(Heroes, numberOfPlayers);
     setHero(generatedHero.name);
     setAspect(getRandom(Aspects, generatedHero.numberOfAspects));
 
@@ -27,37 +28,21 @@ function App() {
     setModularSet(getRandom(ModularSets, generatedVillain.numberOfModularSets));
   }
 
-  function testGeneratedItems() {
-    interface heroCount {
-      name: string;
-      count: number;
-    }
-
-    var heroCounter : Map<string, number> = new Map<string, number>();
-    Heroes.forEach((hero) => heroCounter.set(hero.name, 0));
-    
-    for (let i = 0; i < 100; ++i) {
-      let rand = getRandom(Heroes, 1);
-      let prevValue = heroCounter?.get(rand.name) ?? 0;
-      heroCounter.set(rand.name, prevValue + 1);
-    }
-    debugger;
-    setHeroTest(heroCounter);
+  const onNumberOfPlayersSelected = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue : number = +event.target.value;
+    setNumberOfPlayers(newValue)
   }
 
   return (
     <div>
-      {/* <button onClick={testGeneratedItems}>Test</button>
-      {Array.from(heroTest.keys()).map(hero => {debugger; return <p>{hero} - {heroTest.get(hero)}</p>})} */}
-
+      <NumberOfPlayerSelector numberOfPlayers={numberOfPlayers} onNumberOfPlayersSelected={onNumberOfPlayersSelected} />
       <button onClick={generate}>Generate!</button>
+
       <Hero hero={hero}/>
       <Aspect aspects={aspect}/>
       <Villain villain={villain}/>
       <ModularSet modularSets={modularSet}/>
     </div>);
-  
-
 }
 
 export default App;
