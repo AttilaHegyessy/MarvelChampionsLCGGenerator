@@ -1,4 +1,4 @@
-export function getRandom(array, numberOfItems) {
+export function getRandom(array, numberOfItems = 1) {
     // if (numberOfItems === undefined || numberOfItems === 1)
     //     return shuffle(array).slice(0, numberOfItems)[0];
 

@@ -9,7 +9,7 @@ const HeroAspectPair = (props) => {
             <h1>Hero</h1>
             <Hero hero={props.hero}/>
             <h1>Aspects</h1>
-            {props.aspects.map((aspect) => <Aspect aspect={aspect}/>)}
+            {props.aspects.map((aspect) => <Aspect key={aspect} aspect={aspect}/>)}
         </>
     );
 

@@ -7,7 +7,7 @@ function Villain(props) {
             <h1>Villain:</h1>
             <DisplayElement name={props.villain.name}/>
             <h1>Modular sets:</h1>
-            {props.villain.modularSets.map((modularSet)=> <DisplayElement name={modularSet}/>)}
+            {props.villain.modularSets.map((modularSet)=> <DisplayElement key={modularSet} name={modularSet}/>)}
         </>
     );
 }

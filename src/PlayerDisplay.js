@@ -4,7 +4,7 @@ import HeroAspectPair from './HeroAspectPair';
 const PlayerDisplay = (props) => {
     return (
         <>
-            {props.heroAspectPairs.map((pair) => <HeroAspectPair hero={pair.hero} aspects={pair.aspects}/>)}
+            {props.heroAspectPairs.map((pair) => <HeroAspectPair key={pair.hero} hero={pair.hero} aspects={pair.aspects}/>)}
         </>
     );
 };
