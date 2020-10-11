@@ -1,8 +1,8 @@
 import { getRandom } from './Randomizer';
-import { HeroList } from './Data/HeroList';
-import { AspectList } from './Data/AspectList'
-import { VillainList } from './Data/VillainList';
-import { ModularSetList} from './Data/ModularSetList';
+import { HeroList } from '../Data/HeroList';
+import { AspectList } from '../Data/AspectList'
+import { VillainList } from '../Data/VillainList';
+import { ModularSetList} from '../Data/ModularSetList';
 
 let addedHeroes = [];
 let addedAspects = [];

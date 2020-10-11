@@ -1,10 +1,8 @@
 export function getRandom(array, numberOfItems = 1) {
-    // if (numberOfItems === undefined || numberOfItems === 1)
-    //     return shuffle(array).slice(0, numberOfItems)[0];
-
     return shuffle(array).slice(0, numberOfItems);
 }
 
+//https://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
 

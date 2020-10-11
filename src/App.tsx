@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import NumberOfPlayerSelector from './NumberOfPlayersSelector';
-import PlayerDisplay from './PlayerDisplay';
-import Scenario from './Scenario'
-import { generatePlayers, generateScenario } from './Generator';
+import NumberOfPlayerSelector from './View/NumberOfPlayersSelector';
+import PlayerDisplay from './View/PlayerDisplay';
+import Scenario from './View/Scenario'
+import { generatePlayers, generateScenario } from './Functionality/Generator';
+import logo from './Images/mc_logo.png';
+import './App.css';
 
 function App() {
   interface HeroAspectPair {
@@ -17,9 +19,6 @@ function App() {
 
   const [heroAspectPairs, setHeroAspectPairs] = useState<HeroAspectPair[]>([]);
   const [scenario, setScenario] = useState<Scenario>();
-  // const [aspect, setAspect] = useState([]);
-  // const [villain, setVillain] = useState();
-  // const [modularSet, setModularSet] = useState([]);
   const [numberOfPlayers, setNumberOfPlayers] = useState(1);
 
   function generate() {
@@ -27,14 +26,10 @@ function App() {
     setScenario(generateScenario());
   }
 
-  const onNumberOfPlayersSelected = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newValue : number = +event.target.value;
-    setNumberOfPlayers(newValue)
-  }
-
   return (
     <div>
-      <NumberOfPlayerSelector numberOfPlayers={numberOfPlayers} onNumberOfPlayersSelected={onNumberOfPlayersSelected} />
+      <img src={logo} alt='Marvel Champions Logo' className='mc-main-logo'/>
+      <NumberOfPlayerSelector numberOfPlayers={numberOfPlayers} onNumberOfPlayersSelected={(e : React.ChangeEvent<HTMLInputElement>)=> setNumberOfPlayers(+e.target.value)} />
       <button onClick={generate}>Generate!</button>
       <PlayerDisplay heroAspectPairs={heroAspectPairs}/>
       <Scenario scenario={scenario}/>
