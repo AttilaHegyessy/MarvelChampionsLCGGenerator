@@ -1,4 +1,4 @@
-export const Aspects = [
+export const AspectList = [
     'Aggression',
     'Justice',
     'Leadership',

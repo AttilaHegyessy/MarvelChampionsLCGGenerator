@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function DisplayElement(props) {
+export const DisplayElement = (props) => {
     return (
         <>
             {props.name}

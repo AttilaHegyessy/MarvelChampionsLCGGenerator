@@ -1,6 +1,6 @@
 export function getRandom(array, numberOfItems) {
-    if (numberOfItems === undefined || numberOfItems === 1)
-        return shuffle(array).slice(0, numberOfItems)[0];
+    // if (numberOfItems === undefined || numberOfItems === 1)
+    //     return shuffle(array).slice(0, numberOfItems)[0];
 
     return shuffle(array).slice(0, numberOfItems);
 }

@@ -1,4 +1,4 @@
-export const Heroes =[
+export const HeroList =[
     {name: 'Black Panther', numberOfAspects: 1 },
     {name: 'Black Widow', numberOfAspects: 1 },
     {name: 'Captain America', numberOfAspects: 1 },

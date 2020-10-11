@@ -1,4 +1,4 @@
-export const Villains = [
+export const VillainList = [
     { name: 'Rhino', numberOfModularSets: 1 },
     { name: 'Klaw', numberOfModularSets: 1 },
     { name: 'Ultron', numberOfModularSets: 1 },

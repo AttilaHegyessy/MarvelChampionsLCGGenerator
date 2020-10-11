@@ -1,17 +1,10 @@
 import React from 'react'
 import { DisplayElement } from './DisplayElement'
 
-function ModularSet(props) {
-    function getAsArray(object) {
-        return Array.isArray(object) ? object : [object];
-    }
-
+const ModularSet = (props) => {
     return (
         <>
-            <h1>Modular set(s): </h1>
-            <ul>
-                {getAsArray(props.modularSets).map((modularSet) => <li key={modularSet}><DisplayElement name={modularSet}/></li>)}
-            </ul>
+            <DisplayElement name={props.modularSetName}/>
         </>
     );
 }

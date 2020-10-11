@@ -1,47 +1,46 @@
 import React, { useState } from 'react';
-import Hero from './Hero';
-import Aspect from './Aspect';
-import Villain from './Villain'
-import ModularSet from './ModularSet';
 import NumberOfPlayerSelector from './NumberOfPlayersSelector';
-import { Heroes } from './Data/HeroList';
-import { Aspects } from './Data/AspectList';
-import { Villains } from './Data/VillainList';
-import { ModularSets } from './Data/ModularSetList';
-import { getRandom } from './Randomizer';
+import PlayerDisplay from './PlayerDisplay';
+import Villain from './Villain'
 
 function App() {
   
-  const [hero, setHero] = useState();
-  const [aspect, setAspect] = useState([]);
-  const [villain, setVillain] = useState();
-  const [modularSet, setModularSet] = useState([]);
+  // const [heroAspectPairs, setHero] = useState([]);
+  // const [aspect, setAspect] = useState([]);
+  // const [villain, setVillain] = useState();
+  // const [modularSet, setModularSet] = useState([]);
   const [numberOfPlayers, setNumberOfPlayers] = useState(1);
 
   function generate() {
-    let generatedHero = getRandom(Heroes, numberOfPlayers);
-    setHero(generatedHero.name);
-    setAspect(getRandom(Aspects, generatedHero.numberOfAspects));
+    // let generatedHeroes = getRandom(HeroList, numberOfPlayers);
+    // setHero(generatedHeroes);
+    // setAspect(getRandom(AspectList, generatedHeroes.numberOfAspects));
 
-    let generatedVillain = getRandom(Villains, 1);
-    setVillain(generatedVillain.name);
-    setModularSet(getRandom(ModularSets, generatedVillain.numberOfModularSets));
+    // let generatedVillain = getRandom(VillainList, 1);
+    // setVillain(generatedVillain.name);
+    // setModularSet(getRandom(ModularSetList, generatedVillain.numberOfModularSets));
   }
 
   const onNumberOfPlayersSelected = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newValue : number = +event.target.value;
     setNumberOfPlayers(newValue)
   }
+  
+  const heroAspectPairs = [
+    {hero: "Black Widow", aspects: ["Justice"]},
+    {hero: "Spider-Woman", aspects: ["Aggression", "Protection"]}];
+
+  const villain = {
+    name: "Crossbones",
+    modularSets: ["Legions of Hydra", "Weapon Master", "Hydra Assault"]
+  };
 
   return (
     <div>
       <NumberOfPlayerSelector numberOfPlayers={numberOfPlayers} onNumberOfPlayersSelected={onNumberOfPlayersSelected} />
       <button onClick={generate}>Generate!</button>
-
-      <Hero hero={hero}/>
-      <Aspect aspects={aspect}/>
+      <PlayerDisplay heroAspectPairs={heroAspectPairs}/>
       <Villain villain={villain}/>
-      <ModularSet modularSets={modularSet}/>
     </div>);
 }
 

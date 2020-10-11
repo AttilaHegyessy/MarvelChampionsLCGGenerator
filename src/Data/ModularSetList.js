@@ -1,4 +1,4 @@
-export const ModularSets = [
+export const ModularSetList = [
     'Bomb Scare',
     'Masters Of Evil',
     'Under Attack',
