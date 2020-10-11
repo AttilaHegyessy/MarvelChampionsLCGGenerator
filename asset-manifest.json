@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/MarvelChampionsLCGGenerator/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/MarvelChampionsLCGGenerator/static/js/main.95df38f1.chunk.js",
+    "main.js.map": "/MarvelChampionsLCGGenerator/static/js/main.95df38f1.chunk.js.map",
+    "runtime-main.js": "/MarvelChampionsLCGGenerator/static/js/runtime-main.abcee005.js",
+    "runtime-main.js.map": "/MarvelChampionsLCGGenerator/static/js/runtime-main.abcee005.js.map",
+    "static/js/2.f3d799e6.chunk.js": "/MarvelChampionsLCGGenerator/static/js/2.f3d799e6.chunk.js",
+    "static/js/2.f3d799e6.chunk.js.map": "/MarvelChampionsLCGGenerator/static/js/2.f3d799e6.chunk.js.map",
+    "index.html": "/MarvelChampionsLCGGenerator/index.html",
+    "precache-manifest.9bb26b68a0340de272c59212702467a3.js": "/MarvelChampionsLCGGenerator/precache-manifest.9bb26b68a0340de272c59212702467a3.js",
+    "service-worker.js": "/MarvelChampionsLCGGenerator/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/MarvelChampionsLCGGenerator/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.f3d799e6.chunk.js.LICENSE.txt": "/MarvelChampionsLCGGenerator/static/js/2.f3d799e6.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.abcee005.js",
+    "static/js/2.f3d799e6.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.95df38f1.chunk.js"
+  ]
+}
