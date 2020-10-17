@@ -1,24 +1,26 @@
 {
   "files": {
-    "main.css": "/MarvelChampionsLCGGenerator/static/css/main.2303b9de.chunk.css",
-    "main.js": "/MarvelChampionsLCGGenerator/static/js/main.110f0a47.chunk.js",
-    "main.js.map": "/MarvelChampionsLCGGenerator/static/js/main.110f0a47.chunk.js.map",
+    "main.css": "/MarvelChampionsLCGGenerator/static/css/main.fcf626d7.chunk.css",
+    "main.js": "/MarvelChampionsLCGGenerator/static/js/main.b1485304.chunk.js",
+    "main.js.map": "/MarvelChampionsLCGGenerator/static/js/main.b1485304.chunk.js.map",
     "runtime-main.js": "/MarvelChampionsLCGGenerator/static/js/runtime-main.abcee005.js",
     "runtime-main.js.map": "/MarvelChampionsLCGGenerator/static/js/runtime-main.abcee005.js.map",
-    "static/js/2.a55d2260.chunk.js": "/MarvelChampionsLCGGenerator/static/js/2.a55d2260.chunk.js",
-    "static/js/2.a55d2260.chunk.js.map": "/MarvelChampionsLCGGenerator/static/js/2.a55d2260.chunk.js.map",
+    "static/css/2.2a86faee.chunk.css": "/MarvelChampionsLCGGenerator/static/css/2.2a86faee.chunk.css",
+    "static/js/2.d0e8a6ce.chunk.js": "/MarvelChampionsLCGGenerator/static/js/2.d0e8a6ce.chunk.js",
+    "static/js/2.d0e8a6ce.chunk.js.map": "/MarvelChampionsLCGGenerator/static/js/2.d0e8a6ce.chunk.js.map",
     "index.html": "/MarvelChampionsLCGGenerator/index.html",
-    "precache-manifest.0574ec87c9d55b96d704989e48de85f4.js": "/MarvelChampionsLCGGenerator/precache-manifest.0574ec87c9d55b96d704989e48de85f4.js",
+    "precache-manifest.07c8f2c8a7bc10edd88465e60660f411.js": "/MarvelChampionsLCGGenerator/precache-manifest.07c8f2c8a7bc10edd88465e60660f411.js",
     "service-worker.js": "/MarvelChampionsLCGGenerator/service-worker.js",
-    "static/css/main.2303b9de.chunk.css.map": "/MarvelChampionsLCGGenerator/static/css/main.2303b9de.chunk.css.map",
-    "static/js/2.a55d2260.chunk.js.LICENSE.txt": "/MarvelChampionsLCGGenerator/static/js/2.a55d2260.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/MarvelChampionsLCGGenerator/static/media/MarvelRegular.067285b0.ttf",
+    "static/css/2.2a86faee.chunk.css.map": "/MarvelChampionsLCGGenerator/static/css/2.2a86faee.chunk.css.map",
+    "static/css/main.fcf626d7.chunk.css.map": "/MarvelChampionsLCGGenerator/static/css/main.fcf626d7.chunk.css.map",
+    "static/js/2.d0e8a6ce.chunk.js.LICENSE.txt": "/MarvelChampionsLCGGenerator/static/js/2.d0e8a6ce.chunk.js.LICENSE.txt",
     "static/media/mc_logo.png": "/MarvelChampionsLCGGenerator/static/media/mc_logo.84e9023b.png"
   },
   "entrypoints": [
     "static/js/runtime-main.abcee005.js",
-    "static/js/2.a55d2260.chunk.js",
-    "static/css/main.2303b9de.chunk.css",
-    "static/js/main.110f0a47.chunk.js"
+    "static/css/2.2a86faee.chunk.css",
+    "static/js/2.d0e8a6ce.chunk.js",
+    "static/css/main.fcf626d7.chunk.css",
+    "static/js/main.b1485304.chunk.js"
   ]
 }
