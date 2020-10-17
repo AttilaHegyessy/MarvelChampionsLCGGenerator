@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { ButtonGroup, ToggleButton, Row, Col } from "react-bootstrap";
 
 interface INumberOfPlayersSelector {
@@ -7,14 +7,11 @@ interface INumberOfPlayersSelector {
   onNumberOfPlayersSelected: (value: number) => void;
 }
 
-const NumberOfPlayersSelector = ({
+export default function NumberOfPlayersSelector({
   numberOfPlayers,
   onNumberOfPlayersSelected,
-}: INumberOfPlayersSelector) => {
+}: INumberOfPlayersSelector) {
   const options = [1, 2, 3, 4];
-  const [selectedNumberOfPlayers, setSelectedNumberOfPlayers] = useState(
-    numberOfPlayers
-  );
 
   return (
     <Col>
@@ -28,10 +25,9 @@ const NumberOfPlayersSelector = ({
               variant="secondary"
               name="radio"
               value={option}
-              checked={selectedNumberOfPlayers === option}
+              checked={numberOfPlayers === option}
               onChange={(e) => {
                 const selectedValue: number = +e.currentTarget.value;
-                setSelectedNumberOfPlayers(selectedValue);
                 onNumberOfPlayersSelected(selectedValue);
               }}
             >
@@ -42,39 +38,4 @@ const NumberOfPlayersSelector = ({
       </Row>
     </Col>
   );
-
-  // return (
-  //   <div>
-  //     <input
-  //       type="radio"
-  //       value="1"
-  //       checked={numberOfPlayers === 1}
-  //       onChange={onNumberOfPlayersSelected}
-  //     />
-  //     1
-  //     <input
-  //       type="radio"
-  //       value="2"
-  //       checked={numberOfPlayers === 2}
-  //       onChange={onNumberOfPlayersSelected}
-  //     />
-  //     2
-  //     <input
-  //       type="radio"
-  //       value="3"
-  //       checked={numberOfPlayers === 3}
-  //       onChange={onNumberOfPlayersSelected}
-  //     />
-  //     3
-  //     <input
-  //       type="radio"
-  //       value="4"
-  //       checked={numberOfPlayers === 4}
-  //       onChange={onNumberOfPlayersSelected}
-  //     />
-  //     4
-  //   </div>
-  // );
-};
-
-export default NumberOfPlayersSelector;
+}

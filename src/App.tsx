@@ -23,6 +23,12 @@ export default function App() {
     setScenario(generateScenario());
   }
 
+  function reset() {
+    setHeroAspectPairs([]);
+    setScenario(undefined);
+    setNumberOfPlayers(1);
+  }
+
   return (
     <Container>
       <PlayerDetailsModal
@@ -34,7 +40,12 @@ export default function App() {
           Open Modal
         </Button>
       </Row> */}
-      <Image src={logo} alt="Marvel Champions Logo" className="mc-main-logo" />
+      <Image
+        src={logo}
+        alt="Marvel Champions Logo"
+        className="mc-main-logo"
+        onClick={() => reset()}
+      />
       <Row className="row-with-margin">
         <NumberOfPlayerSelector
           numberOfPlayers={numberOfPlayers}

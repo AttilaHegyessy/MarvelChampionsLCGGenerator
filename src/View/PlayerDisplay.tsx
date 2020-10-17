@@ -7,7 +7,7 @@ interface IPlayerDisplay {
   heroAspectPairs: IHeroAspectPair[];
 }
 
-const PlayerDisplay = ({ heroAspectPairs }: IPlayerDisplay) => {
+export default function PlayerDisplay({ heroAspectPairs }: IPlayerDisplay) {
   return heroAspectPairs.length === undefined ? null : (
     <>
       {heroAspectPairs.map((pair, index) => (
@@ -22,6 +22,4 @@ const PlayerDisplay = ({ heroAspectPairs }: IPlayerDisplay) => {
       ))}
     </>
   );
-};
-
-export default PlayerDisplay;
+}

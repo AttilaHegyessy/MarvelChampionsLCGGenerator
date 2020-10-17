@@ -6,7 +6,7 @@ interface IScenarioProp {
   scenario?: IScenario;
 }
 
-function Scenario({ scenario }: IScenarioProp) {
+export default function Scenario({ scenario }: IScenarioProp) {
   return scenario === undefined ? null : (
     <>
       <Card style={{ width: "500px" }}>
@@ -36,5 +36,3 @@ function Scenario({ scenario }: IScenarioProp) {
     </>
   );
 }
-
-export default Scenario;
