@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4c2579bbe1e9b233ac28f5f3e7092bbc",
+    "revision": "d2a5db21eaee9dabe21e5a00726fccdb",
     "url": "/MarvelChampionsLCGGenerator/index.html"
   },
   {
