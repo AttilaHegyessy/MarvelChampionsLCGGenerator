@@ -3,19 +3,29 @@
   width: 20%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 10px;
   margin-bottom: 30px;
   display: block;
 }
 
-table {
-  margin-left: auto;
-  margin-right: auto;
-  border: 1px solid black;
+.number-of-players-label {
+  text-align: center !important;
 }
 
-td {
-  font-size: larger;
-  border: 1px solid black;
-  padding: 5px;
-  width: 200px;
+.row-with-margin {
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.btn,
+.btn-group {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }

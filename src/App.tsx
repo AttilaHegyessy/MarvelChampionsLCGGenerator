@@ -9,11 +9,14 @@ import Scenario from "./View/Scenario";
 import { generatePlayers, generateScenario } from "./Functionality/Generator";
 import logo from "./Resources/mc_logo.png";
 import "./App.css";
+import { Button, Container, Image, Row } from "react-bootstrap";
+import PlayerDetailsModal from "./View/PlayerDetailsModal";
 
-function App() {
+export default function App() {
   const [heroAspectPairs, setHeroAspectPairs] = useState<IHeroAspectPair[]>([]);
   const [scenario, setScenario] = useState<IScenario>();
   const [numberOfPlayers, setNumberOfPlayers] = useState(1);
+  const [isPlayerDetailsModalOpen, setPlayerDetailsModalOpen] = useState(false);
 
   function generate() {
     setHeroAspectPairs(generatePlayers(numberOfPlayers));
@@ -21,19 +24,28 @@ function App() {
   }
 
   return (
-    <div>
-      <img src={logo} alt="Marvel Champions Logo" className="mc-main-logo" />
-      <NumberOfPlayerSelector
-        numberOfPlayers={numberOfPlayers}
-        onNumberOfPlayersSelected={(e: React.ChangeEvent<HTMLInputElement>) =>
-          setNumberOfPlayers(+e.target.value)
-        }
+    <Container>
+      <PlayerDetailsModal
+        isVisible={isPlayerDetailsModalOpen}
+        handleClose={() => setPlayerDetailsModalOpen(false)}
       />
-      <button onClick={generate}>Generate!</button>
+      {/* <Row>
+        <Button onClick={() => setPlayerDetailsModalOpen(true)}>
+          Open Modal
+        </Button>
+      </Row> */}
+      <Image src={logo} alt="Marvel Champions Logo" className="mc-main-logo" />
+      <Row className="row-with-margin">
+        <NumberOfPlayerSelector
+          numberOfPlayers={numberOfPlayers}
+          onNumberOfPlayersSelected={(e: number) => setNumberOfPlayers(e)}
+        />
+      </Row>
+      <Row className="row-with-margin">
+        <Button onClick={generate}>Generate!</Button>
+      </Row>
       <PlayerDisplay heroAspectPairs={heroAspectPairs} />
       <Scenario scenario={scenario} />
-    </div>
+    </Container>
   );
 }
-
-export default App;
